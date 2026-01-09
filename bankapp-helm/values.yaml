@@ -1,0 +1,23 @@
+replicaCount: 2
+
+image:
+  repository: adarshjain428/bankapp
+  blueTag: blue
+  greenTag: green
+
+activeColor: blue   # change to green for promotion
+
+service:
+  port: 80
+  targetPort: 8080
+
+database:
+  image: mysql:8
+  rootPassword: Test@123
+  name: bankappdb
+
+istio:
+  gateway:
+    name: bankapp-gateway
+    hosts:
+      - "*"

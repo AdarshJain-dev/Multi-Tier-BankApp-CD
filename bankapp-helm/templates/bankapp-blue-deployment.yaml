@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bankapp-blue
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: bankapp
+      version: blue
+  template:
+    metadata:
+      labels:
+        app: bankapp
+        version: blue
+    spec:
+      containers:
+      - name: bankapp
+        image: "{{ .Values.image.repository }}:{{ .Values.image.blueTag }}"
+        ports:
+        - containerPort: 8080
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: jdbc:mysql://mysql-service:3306/{{ .Values.database.name }}?useSSL=false
+        - name: SPRING_DATASOURCE_USERNAME
+          value: root
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: {{ .Values.database.rootPassword }}
