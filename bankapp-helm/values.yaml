@@ -3,7 +3,7 @@ replicaCount: 2
 image:
   repository: adarshjain428/bankapp
   blueTag: blue
-  greenTag: v5
+  greenTag: v6
 
 activeColor: blue   # change to green for promotion
 
