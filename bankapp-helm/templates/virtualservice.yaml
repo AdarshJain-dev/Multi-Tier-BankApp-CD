@@ -4,7 +4,7 @@ metadata:
   name: bankapp-vs
 spec:
   hosts:
-  - "*"
+  - bankapp.adarsh-jain-ecom.infinityfreeapp.com
   gateways:
   - {{ .Values.istio.gateway.name }}
   http:
