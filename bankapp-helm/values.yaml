@@ -20,4 +20,4 @@ istio:
   gateway:
     name: bankapp-gateway
     hosts:
-      - "*"
+      - bankapp.adarsh-jain-ecom.infinityfreeapp.com
