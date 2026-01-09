@@ -5,7 +5,7 @@ image:
   blueTag: blue
   greenTag: v6
 
-activeColor: green   # change to green for promotion
+activeColor: blue   # change to green for promotion
 
 service:
   port: 80
