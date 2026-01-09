@@ -16,6 +16,11 @@ database:
   rootPassword: Test@123
   name: bankappdb
 
+spring:
+  profile:
+    blue: blue
+    green: green
+
 istio:
   gateway:
     name: bankapp-gateway
