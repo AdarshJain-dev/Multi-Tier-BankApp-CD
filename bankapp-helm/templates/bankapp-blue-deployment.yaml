@@ -26,3 +26,5 @@ spec:
           value: root
         - name: SPRING_DATASOURCE_PASSWORD
           value: {{ .Values.database.rootPassword }}
+        - name: SPRING_PROFILES_ACTIVE
+          value: {{ .Values.spring.profile.blue }}
